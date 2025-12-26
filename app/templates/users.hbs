@@ -1,13 +1,14 @@
 <h1>All users</h1>
 
-<button {{on "click" this.changeFormState}}>
-  {{if this.formIsShowing 'Close' 'Open'}} form
+<button type="button" {{on "click" this.changeFormState}}>
+  {{if this.formIsShowing "Close" "Open"}}
+  form
 </button>
 
 {{#if this.formIsShowing}}
-<div>
-  <p>Showing!</p>
-</div>
+  <div>
+    <p>Showing!</p>
+  </div>
 {{/if}}
 
 {{#if @model}}

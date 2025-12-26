@@ -12,7 +12,6 @@ export default class UserModel extends Model {
   }
 
   get isLegalAge() {
-    return age >= 18;
+    return this.age >= 18;
   }
-
 }
