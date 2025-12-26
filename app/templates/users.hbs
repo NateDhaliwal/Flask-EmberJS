@@ -1,0 +1,26 @@
+<h1>All users</h1>
+
+<button {{on "click" this.changeFormState}}>
+  {{if this.formIsShowing 'Close' 'Open'}} form
+</button>
+
+{{#if this.formIsShowing}}
+<div>
+  <p>Showing!</p>
+</div>
+{{/if}}
+
+{{#if @model}}
+  {{#each @model as |user|}}
+    <Card
+      @username={{user.username}}
+      @full_name={{user.fullName}}
+      @age={{user.age}}
+      @isLegal={{user.isLegalAge}}
+      @bio={{user.bio}}
+    />
+  {{/each}}
+
+{{else}}
+  <p>No users found!</p>
+{{/if}}
