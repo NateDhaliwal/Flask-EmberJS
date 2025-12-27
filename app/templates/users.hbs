@@ -23,7 +23,7 @@
     <Input id="last-name" @type="text" @value={{this.lastNameValue}} />
     
     <label for="bio">Bio:</label>
-    <Textarea id="bio" @type="text" @value={{this.bioValue}} />
+    <Textarea id="bio" @value={{this.bioValue}} />
 
     <button type="button" {{on 'click' this.submitForm}}>Create user</button>
   </div>
