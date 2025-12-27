@@ -6,8 +6,26 @@
 </button>
 
 {{#if this.formIsShowing}}
-  <div>
-    <p>Showing!</p>
+  <div id="create-user-form">
+    <label for="username">Username:</label>
+    <Input id="username" @type="text" @value={{this.usernameValue}} />
+    
+    <label for="password">Password:</label>
+    <Input id="password" @type="password" @value={{this.passwordValue}} />
+    
+    <label for="age">Age:</label>
+    <Input id="age" @type="number" @value={{this.ageValue}} />
+    
+    <label for="first-name">First name:</label>
+    <Input id="first-name" @type="text" @value={{this.firstNameValue}} />
+    
+    <label for="last-name">Last name:</label>
+    <Input id="last-name" @type="text" @value={{this.lastNameValue}} />
+    
+    <label for="bio">Bio:</label>
+    <Textarea id="bio" @type="text" @value={{this.bioValue}} />
+
+    <button type="button" {{on 'click' this.submitForm}}>Create user</button>
   </div>
 {{/if}}
 
